@@ -1,0 +1,14 @@
+{
+  "data": [
+    { "id": 1, "icon": "/icons/faro.png", "name": "FARO" },
+    { "id": 2, "icon": "/icons/basurero.png", "name": "BASURERO" },
+    { "id": 3, "icon": "/icons/avion.png", "name": "AVION" },
+    { "id": 4, "icon": "/icons/balon.png", "name": "BALON" },
+    { "id": 5, "icon": "/icons/microscopio.png", "name": "MICROSCOPIO" },
+    { "id": 6, "icon": "/icons/microfono.png", "name": "MICROFONO" },
+    { "id": 7, "icon": "/icons/heart.png", "name": "HEART" },
+    { "id": 8, "icon": "/icons/mariposa.png", "name": "MARIPOSA" },
+    { "id": 9, "icon": "/icons/llave.png", "name": "LLAVE" },
+    { "id": 10, "icon": "/icons/paloma.png", "name": "PALOMA" }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "questions": [
+    {
+      "id": "040a29fe-b46b-429e-9e2f-a81782aa567c",
+      "question": "¿Cuáles son los 4 últimos dígitos de tu cédula?"
+    },
+    {
+      "id": "341f315a-4bab-40fd-9b15-91cb13e22fa7",
+      "question": "¿Cuál es el nombre de tu mejor amigo de la infancia?"
+    },
+    {
+      "id": "730444b3-94d3-4687-9455-6a3c26013481",
+      "question": "¿Cuál es el nombre de tu primera mascota?"
+    },
+    {
+      "id": "384e1cc7-e43b-4e88-a67b-f8f9363e426c",
+      "question": "¿Cuál es tu película favorita?"
+    },
+    {
+      "id": "572a4c30-d290-41e9-9342-65f739af5421",
+      "question": "¿Cuál fue tu primer trabajo?"
+    }
+  ]
+}
