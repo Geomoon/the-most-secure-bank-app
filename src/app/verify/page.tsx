@@ -30,7 +30,7 @@ export default function Verify() {
             <IconsPicker />
             <div className="flex flex-row-reverse border-t pt-2 mt-2">
               <Link
-                href="/verify"
+                href="/home"
                 className="bg-primary flex justify-center gap-2 text-background rounded-full py-2 font-bold hover:gap-4 duration-200 px-4 active:gap-2"
               >
                 Ingresar

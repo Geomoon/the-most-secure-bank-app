@@ -1,45 +1,100 @@
 import { Header } from "@/components/home/Header";
-import { Navbar } from "@/components/home/Navbar";
-import { Divider } from "@/components/shared/Divider";
 import { HDivider } from "@/components/shared/HDivider";
+import { MenuItem } from "@/components/shared/MenuItem";
 import {
-  Building05Icon,
-  Mouse13Icon,
-  UserMultiple02Icon,
+  BankIcon,
+  CardExchange01Icon,
+  CreditCardAcceptIcon,
+  LegalDocument01Icon,
+  Megaphone01Icon,
+  SearchList01Icon,
+  WalletAdd01Icon,
 } from "hugeicons-react";
 import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="min-h-screen">
-      <Header />
-      <main className="flex min-h-[70svh] items-center">
-        <div className="flex-1 flex flex-row-reverse min-w-full">
-          <div className="min-h-[70svh]">
-            <section className="flex flex-col h-full space-y-4 justify-center bg-card min-w-80 rounded-md pb-4 pt-6 px-6 mr-[10%]">
-              <div className="flex space-x-2 items-center hover:text-lg hover:font-bold cursor-pointer text-primary hover:space-x-2 duration-200">
-                <Mouse13Icon size={48} />
-                <p className="font-bold">BANCA ELECTRÓNICA</p>
-              </div>
-              <HDivider />
-              <Link href={"/auth"}>
-                <div className="flex space-x-2 items-center hover:text-lg hover:font-bold cursor-pointer text-primary hover:space-x-2 duration-200 ">
-                  <UserMultiple02Icon size={36} />
-                  <Divider size={10} />
-                  <p>PERSONAS</p>
+    <div className="min-h-screen flex flex-col">
+      <Header center={true} showSearchBar={false} />
+      <div className="flex-1 pt-4 flex">
+        <aside className="flex flex-col max-w-48 bg-card py-8 rounded-md mb-20">
+          <MenuItem title="Posición Consolidada" icon={<BankIcon />} />
+          <MenuItem title="Campañas" icon={<Megaphone01Icon />} />
+          <MenuItem title="Cuentas" icon={<LegalDocument01Icon />} />
+          <MenuItem title="Créditos" icon={<WalletAdd01Icon />} />
+          <MenuItem title="Visa" icon={<CreditCardAcceptIcon />} />
+          <MenuItem title="Consultas" icon={<SearchList01Icon />} />
+        </aside>
+        <main className="flex-1 flex flex-col gap-4">
+          <div className="flex pl-4 items-center">
+            <h2 className="text-lg font-bold text-center flex-1 leading-tight pr-4">
+              BANCA <br />
+              ELECTRÓNICA
+            </h2>
+            <div className="flex flex-col flex-auto bg-gray-100 py-2 pl-4 border-l-4 border-text">
+              USUARIO - 01054321649
+              <p className="text-sm">
+                ÚLTIMO ACCESO: {new Date().toLocaleString()}
+              </p>
+            </div>
+            <div className="flex-1 bg-gray-100 py-2">
+              <Link href="/welcome">
+                <div className="bg-secondary w-20 text-center justify-center gap-2 text-background rounded-full py-2 font-bold">
+                  Salir
                 </div>
               </Link>
-              <HDivider />
-              <div className="flex space-x-2 items-center hover:text-lg hover:font-bold cursor-pointer text-primary hover:space-x-2 duration-200">
-                <Building05Icon size={36} />
-                <Divider size={10} />
-                <p>EMPRESAS</p>
-              </div>
-            </section>
+            </div>
           </div>
-        </div>
-      </main>
-      <Navbar />
+          <h2 className="pl-4 text-md font-bold text-secondary">
+            Posición Consolidada
+          </h2>
+          <HDivider />
+
+          <div className="mx-4">
+            <div className="relative overflow-x-auto">
+              <table className="w-full text-sm text-left rtl:text-right text-gray-500 ">
+                <thead className="text-xs text-background uppercase bg-primary rounded-t-md">
+                  <tr>
+                    <th scope="col" className="px-6 py-3">
+                      Tipo Cliente
+                    </th>
+                    <th scope="col" className="px-6 py-3">
+                      Tipo Cuenta
+                    </th>
+                    <th scope="col" className="px-6 py-3">
+                      No. Cuenta
+                    </th>
+                    <th scope="col" className="px-6 py-3">
+                      Saldo Contable
+                    </th>
+                    <th scope="col" className="px-6 py-3">
+                      Saldo Disponible
+                    </th>
+                    <th scope="col" className="px-6 py-3">
+                      ESTADO
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="bg-white border-b">
+                    <th
+                      scope="row"
+                      className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"
+                    >
+                      TITULAR
+                    </th>
+                    <td className="px-6 py-4">CUENTA ACTIVA</td>
+                    <td className="px-6 py-4">4894603489603</td>
+                    <td className="px-6 py-4">$2999</td>
+                    <td className="px-6 py-4">$321.47</td>
+                    <td className="px-6 py-4">ACTIVO</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </main>
+      </div>
     </div>
   );
 }
