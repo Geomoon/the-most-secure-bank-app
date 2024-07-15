@@ -3,7 +3,6 @@ import { HDivider } from "@/components/shared/HDivider";
 import { MenuItem } from "@/components/shared/MenuItem";
 import {
   BankIcon,
-  CardExchange01Icon,
   CreditCardAcceptIcon,
   LegalDocument01Icon,
   Megaphone01Icon,

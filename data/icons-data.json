@@ -1,14 +1,54 @@
 {
   "data": [
-    { "id": 1, "icon": "/icons/faro.png", "name": "FARO" },
-    { "id": 2, "icon": "/icons/basurero.png", "name": "BASURERO" },
-    { "id": 3, "icon": "/icons/avion.png", "name": "AVION" },
-    { "id": 4, "icon": "/icons/balon.png", "name": "BALON" },
-    { "id": 5, "icon": "/icons/microscopio.png", "name": "MICROSCOPIO" },
-    { "id": 6, "icon": "/icons/microfono.png", "name": "MICROFONO" },
-    { "id": 7, "icon": "/icons/heart.png", "name": "HEART" },
-    { "id": 8, "icon": "/icons/mariposa.png", "name": "MARIPOSA" },
-    { "id": 9, "icon": "/icons/llave.png", "name": "LLAVE" },
-    { "id": 10, "icon": "/icons/paloma.png", "name": "PALOMA" }
+    {
+      "id": "ce9d7fc0-9ece-4219-9523-e3596c462d69",
+      "icon": "/icons/faro.png",
+      "name": "FARO"
+    },
+    {
+      "id": "18c1164b-938a-4926-af9b-502a734763ad",
+      "icon": "/icons/basurero.png",
+      "name": "BASURERO"
+    },
+    {
+      "id": "1479f086-e64a-4faf-8a7f-5894cc736a4d",
+      "icon": "/icons/avion.png",
+      "name": "AVION"
+    },
+    {
+      "id": "0859e40d-49a9-46b0-bd69-148e05ee4e95",
+      "icon": "/icons/balon.png",
+      "name": "BALON"
+    },
+    {
+      "id": "86590ff7-99a7-4871-bb8b-772d2d707138",
+      "icon": "/icons/microscopio.png",
+      "name": "MICROSCOPIO"
+    },
+    {
+      "id": "e88443c8-4c38-4716-b65f-81e381144a2e",
+      "icon": "/icons/microfono.png",
+      "name": "MICROFONO"
+    },
+    {
+      "id": "b29a7d40-e0cc-4091-b8e5-23f68c9aeb8f",
+      "icon": "/icons/heart.png",
+      "name": "HEART"
+    },
+    {
+      "id": "daa53a19-4047-49e2-80e4-dd97c6deeb73",
+      "icon": "/icons/mariposa.png",
+      "name": "MARIPOSA"
+    },
+    {
+      "id": "4f149aaf-410d-4f25-8fed-e74f65e1c1e0",
+      "icon": "/icons/llave.png",
+      "name": "LLAVE"
+    },
+    {
+      "id": "c6be371b-f0cd-433f-8cf0-35dcdf2f364f",
+      "icon": "/icons/paloma.png",
+      "name": "PALOMA"
+    }
   ]
 }
