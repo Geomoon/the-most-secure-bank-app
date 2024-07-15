@@ -1,10 +1,15 @@
 "use client";
 
 import { useGetQuestions } from "@/hooks/useGetQuestions";
+import { Question as QModel } from "@/models/question";
 import { ReloadIcon } from "hugeicons-react";
 import { FC } from "react";
 
-export const Question: FC = () => {
+type props = {
+  setValue: (question: QModel) => void;
+};
+
+export const Question: FC<props> = ({ setValue }) => {
   const { question, next } = useGetQuestions();
 
   return (
@@ -14,6 +19,7 @@ export const Question: FC = () => {
         type="text"
         className="border-2 rounded-full px-4 py-2 focus:border-primary w-full"
         placeholder="Escribe aquí la respuesta"
+        onChange={(e) => setValue({ ...question!, answer: e.target.value })}
       />
       <div className="flex flex-row-reverse">
         <div

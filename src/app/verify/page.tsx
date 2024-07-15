@@ -1,11 +1,36 @@
+"use client";
+
 import { Header } from "@/components/home/Header";
 import { HDivider } from "@/components/shared/HDivider";
 import { IconsPicker } from "@/components/verify/IconsPicker";
 import { Question } from "@/components/verify/Question";
-import { ArrowRight02Icon, ReloadIcon } from "hugeicons-react";
-import Link from "next/link";
+import { Icon } from "@/models/icon";
+import { Question as QModel } from "@/models/question";
+import { verifyInfo } from "@/service/authService";
+import { ArrowRight02Icon } from "hugeicons-react";
+import { redirect } from "next/navigation";
+import { useCallback, useState } from "react";
 
 export default function Verify() {
+  const [icon, setIcon] = useState<Icon | undefined>();
+  const [question, setQuestion] = useState<QModel | undefined>();
+
+  const handleSubmit = useCallback(() => {
+    if (!icon || !question) {
+      alert("COMPLETA LAS PREGUNTAS");
+      return;
+    }
+
+    const isValid = verifyInfo(icon!, question!);
+    console.log(isValid);
+    if (!isValid) {
+      alert("INFORMACION INCORRECTA");
+      return;
+    }
+    // redirect("/home");
+    window.location.href = "/home";
+  }, [icon, question]);
+
   return (
     <div className="min-h-screen">
       <Header center={true} showSearchBar={false} />
@@ -23,19 +48,19 @@ export default function Verify() {
             <p className="text-sm text-primary font-bold">
               PREGUNTA DE SEGURIDAD
             </p>
-            <Question />
+            <Question setValue={setQuestion} />
             <p className="text-sm text-primary font-bold mt-4">
               SELECCIONA LA IMAGEN ASOCIADA A TU CUENTA
             </p>
-            <IconsPicker />
+            <IconsPicker setValue={setIcon} />
             <div className="flex flex-row-reverse border-t pt-2 mt-2">
-              <Link
-                href="/home"
+              <button
+                onClick={handleSubmit}
                 className="bg-primary flex justify-center gap-2 text-background rounded-full py-2 font-bold hover:gap-4 duration-200 px-4 active:gap-2"
               >
                 Ingresar
                 <ArrowRight02Icon size={23} />
-              </Link>
+              </button>
             </div>
           </div>
         </div>

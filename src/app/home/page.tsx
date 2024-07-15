@@ -1,6 +1,9 @@
+"use client";
+
 import { Header } from "@/components/home/Header";
 import { HDivider } from "@/components/shared/HDivider";
 import { MenuItem } from "@/components/shared/MenuItem";
+import { useAuth } from "@/providers/authProvider";
 import {
   BankIcon,
   CreditCardAcceptIcon,
@@ -9,9 +12,17 @@ import {
   SearchList01Icon,
   WalletAdd01Icon,
 } from "hugeicons-react";
-import Link from "next/link";
+import { useCallback } from "react";
 
 export default function Home() {
+  const { setUser, user } = useAuth();
+
+  const onLogout = useCallback(() => {
+    setUser(null);
+    localStorage.clear();
+    window.location.href = "/welcome";
+  }, [setUser]);
+
   return (
     <div className="min-h-screen flex flex-col">
       <Header center={true} showSearchBar={false} />
@@ -31,17 +42,17 @@ export default function Home() {
               ELECTRÓNICA
             </h2>
             <div className="flex flex-col flex-auto bg-gray-100 py-2 pl-4 border-l-4 border-text">
-              USUARIO - 01054321649
+              USUARIO - {user?.user}
               <p className="text-sm">
                 ÚLTIMO ACCESO: {new Date().toLocaleString()}
               </p>
             </div>
             <div className="flex-1 bg-gray-100 py-2">
-              <Link href="/welcome">
+              <button onClick={onLogout}>
                 <div className="bg-secondary w-20 text-center justify-center gap-2 text-background rounded-full py-2 font-bold">
                   Salir
                 </div>
-              </Link>
+              </button>
             </div>
           </div>
           <h2 className="pl-4 text-md font-bold text-secondary">
